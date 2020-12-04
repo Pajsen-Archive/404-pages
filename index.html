@@ -1,108 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create a column layout with Flexbox */
-.row {
-  display: flex;
-}
-
-/* Left column (menu) */
-.left {
-  flex: 35%;
-  padding: 15px 0;
-}
-
-.left h2 {
-  padding-left: 8px;
-}
-
-/* Right column (page content) */
-.right {
-  flex: 65%;
-  padding: 15px;
-}
-
-/* Style the search box */
-#mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid #ddd;
-}
-
-/* Style the navigation menu inside the left column */
-#myMenu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myMenu li a {
-  padding: 12px;
-  text-decoration: none;
-  color: black;
-  display: block
-}
-
-#myMenu li a:hover {
-  background-color: #eee;
-}
-</style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blueprint: Multi-Level Menu</title>
+	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- food icons -->
+	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+	<!-- demo styles -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- menu styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
 </head>
+
 <body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<h2 class="dummy-heading">Tags</h2>
+			</div>
+			<div class="bp-header__main">
+				<span class="bp-header__present">404 Pages <span class="bp-tooltip bp-icon bp-icon--about" data-content="404 pages is a open source listing site, we find the best open source 404 pages and give them to you"></span></span>
+				<h1 class="bp-header__title">Menu</h1>
+			</div>
+		</header>
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Computers</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Anarchy</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Animations</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Fun</a></li>
+          
+          <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Space</a></li>
+        	<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="#">Terminal</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-7" aria-owns="submenu-7" href="#">Books</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-8" aria-owns="submenu-8" href="#">History</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-9" aria-owns="submenu-9" href="#">Games</a></li>
 
-<h2>Best Open Source 404 pages</h2>
-<p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+				</ul>
+				<!-- Submenu 1 -->
+				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Computers">
+					<li class="menu__item" role="menuitem" href="computer/error-glitch.html"><a class="menu__link" href="computer/error-glitch.html">Error With Glitch Effect</a></li>
+					<li class="menu__item" role="menuitem" href="computer/fail-mac.html"><a class="menu__link" href="computer/fail-mac.html">Mac Application fail</a></li>
+					<li class="menu__item" role="menuitem" href="computer/matrix-glitch.html"><a class="menu__link" href="computer/matrix-glitch.html">Matrix Glitch</a></li>
+					<li class="menu__item" role="menuitem" href="computer/old-command-line.html"><a class="menu__link" href="computer/old-command-line.html">Old Command Line</a></li>
+					<li class="menu__item" role="menuitem" href="computer/rage.html"><a class="menu__link" href="computer/rage.html">Rage 404 page</a></li>
+					<li class="menu__item" role="menuitem" href="computer/robot-dance.html"><a class="menu__link" href="computer/robot-dance.html">Robot Dance</a></li>
+				</ul>
+			
+				<!-- Submenu 2 -->
+				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Anarchy">
+					<li class="menu__item" role="menuitem" href="anarchy/anarchy.html"><a class="menu__link" href="anarchy/anarchy.html">Anarchy tv Old looking</a></li>
+        </ul>
+				<!-- Submenu 3 -->
+				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Animations">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Pink color changing page with 404</a></li>
 
-<div class="row">
-  <div class="left" style="background-color:#bbb;">
-    <h2>Menu</h2>
-    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-    <ul id="myMenu">
-      <li><a href="computer/">Computer Styles</a></li>
-      <li><a href="games/">Game Style</a></li>
-      <li><a href="history/">History Style</a></li>
-      <li><a href="terminal/">Terminal Style</a></li>
-      <li><a href="animations/">Animations</a></li>
-      <li><a href="anarchy/">Anarchy</a></li>
-      <li><a href="books/">Books</a></li>
-      <li><a href="space/">Space</a></li>
-      <li><a href="fun">Fun</a></li>
-    </ul>
-  </div>
-  
-  <div class="right" style="background-color:transperant;">
-   
-  </div>
-</div>
+				</ul>
+		
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Fun">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="fun/boll.html">Rolling ball insted of 0</a></li>
+          <li class="menu__item" role="menuitem"><a class="menu__link" href="fun/book.html">Bookshelf With Books</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="fun/falling.html">Falling fours</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="fun/not-fun-its-boring.html">Not fun, it's boring</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="fun/rage.html">Raging 404</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="fun/spotlight.html">Spotlight</a></li>
+				</ul>
+			
+        <!-- Submenu 5 -->
+        <ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Space">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="space/mars.html">404 got to mars, sadly it it didn't exist</a></li>
+          <li class="menu__item" role="menuitem"><a class="menu__link" href="space/moon.html">Moon got deleted by a 404 error</a></li>
+				</ul>
+        
+        <!-- Submenu 6 -->
+        <ul data-menu="submenu-6" id="submenu-6" class="menu__level" tabindex="-1" role="menu" aria-label="Terminal">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="terminal/error-message.html">Terminal Error Message, new school</a></li>
+          <li class="menu__item" role="menuitem"><a class="menu__link" href="terminal/old-school.html">Terminal Error Message, old school</a></li>
+					
+				</ul>
+        
+        <!-- Submenu 7 -->
+        <ul data-menu="submenu-7" id="submenu-7" class="menu__level" tabindex="-1" role="menu" aria-label="Books">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="books/bookshelf.html">Bookshelf with a missing book, where did it go?</a></li>
+				</ul>
+        
+        <!-- Submenu 8 -->
+        <ul data-menu="submenu-8" id="submenu-8" class="menu__level" tabindex="-1" role="menu" aria-label="History">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="history/anarchy.html">History of Anarchy</a></li>
+          <li class="menu__item" role="menuitem"><a class="menu__link" href="history/cavemen.html">Cavemen hitting each other</a></li>
+				</ul>
+        
+        <!-- Submenu 9 -->
+        <ul data-menu="submenu-9" id="submenu-9" class="menu__level" tabindex="-1" role="menu" aria-label="Games">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="games/8bit-text.html">8bit Text 404</a></li>
+          <li class="menu__item" role="menuitem"><a class="menu__link" href="games/ghost.html">Bookshelf With Books</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="games/retro.html">Retro Game 404</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="games/space-invators.html">A playable Space Invaders Clone saying 404</a></li>
+					
+				</ul>
+        
+        
+			</div>
+		</nav>
+		<div class="content">
+			<p class="info">Please choose a category</p>
+			<!-- Ajax loaded content here -->
+		</div>
+	</div>
+	<!-- /view -->
+	<script src="js/classie.js"></script>
+	<script src="js/dummydata.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				breadcrumbsCtrl : true, // show breadcrumbs
+				initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : false, //, // show back button
+				itemsDelayInterval : 60 // delay between each menu item sliding animation
+			//	onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
 
-<script>
-function myFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("mySearch");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myMenu");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script>
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
 
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+	})();
+	</script>
 </body>
+
 </html>
